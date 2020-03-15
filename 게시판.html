@@ -1,0 +1,179 @@
+<div id="boardLnbCommon">
+	<h2 class="title1"><a href="/service/cs" designElement="text" textIndex="1"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvX21vZHVsZXMvY29tbW9uL2JvYXJkX2xuYi5odG1s" >CS CENTER</a></h3>
+	<ul class="lnb_sub">
+		<li ><a href="/board/?id=notice" designElement="text" textIndex="2"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvX21vZHVsZXMvY29tbW9uL2JvYXJkX2xuYi5odG1s" >공지사항</a></li>
+		<li ><a href="/board/?id=faq" designElement="text" textIndex="3"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvX21vZHVsZXMvY29tbW9uL2JvYXJkX2xuYi5odG1s" >자주 묻는 질문</a></li>
+		<li ><a href="/board/?id=goods_qna" designElement="text" textIndex="4"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvX21vZHVsZXMvY29tbW9uL2JvYXJkX2xuYi5odG1s" >상품문의</a></li>
+		<li ><a href="/board/?id=goods_review" designElement="text" textIndex="5"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvX21vZHVsZXMvY29tbW9uL2JvYXJkX2xuYi5odG1s" >상품후기</a></li>
+	</ul>
+</div>
+<script>
+$(function() {
+	// 고객센터 LNB 텍스트 수정기능으로 삭제시, 클라이언트단에서 삭제 처리
+	$('#boardLnbCommon a').each(function(e) {
+		if ( $(this).text() == '' ) {
+			$(this).parent('li, h2').remove();
+	d
+d);
+});
+</script>
+			<!-- ------- //고객센터 LNB 인클루드 ------- -->
+		</div>
+
+		<!-- +++++ cscenter contents ++++ -->
+		<div class="subpage_container">
+			<!-- 전체 메뉴 -->
+			<a id="subAllButton" class="btn_sub_all" href="javascript:void(0)"><span designElement="text" textIndex="1"  textTemplatePath="cmVzcG9uc2l2ZV9vMm9fdmVyMV9kZWZhdWx0X2dsXzEvYm9hcmQvaW5kZXguaHRtbA==" >MENU</span></a>
+
+			<!-- 타이틀 ( 관리자에서 설정한 "게시판명"이 노출됩니다. ) -->
+			<div class="title_container">
+				<h2>갤러리</h2>
+			</div>
+
+			<div id="bbslist">
+				<!-- ------- 각각의 게시판 index.html( 게시물 리스트 ) 로드 ------- -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
+@@ 사용자 생성 "갤러리형" 게시판 - List @@
+- 파일위치 : [스킨폴더]/board/게시판아이디/gallery01/index.html
+++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<style type="text/css">
+#subpageLNB, #subAllButton'7b display:none }
+.subpage_wrap .subpage_container '7b padding-left:0 }
+.custom_board_img_area '7b width:399px }
+
+@media only screen and (max-width:1023px) '7b
+	.subpage_wrap .subpage_container '7b padding-left:10px }
+'7d
+</style>
+
+<form name="boardsearch" id="boardsearch" >
+	<input type="hidden" name="id" value="gallery_bbs" >
+	<input type="hidden" name="popup" value="" >
+	<input type="hidden" name="iframe" value="" >
+	<input type="hidden" name="goods_seq" value="" >
+	<input type="hidden" name="perpage" id="perpage" value="" >
+	<input type="hidden" name="page" id="page" value="" >
+	<input type="hidden" name="category" id="category" value="" >
+
+	<ul class="bbs_top_wrap gallery">
+		<li class="left">
+			<!-- 갤러리 타입 선택 -->
+			<ul id="customGallerySort" class="custom_gallery_sort">
+				<li class="sort_1 "><a href="#type1">가로형</a></li>
+				<li class="sort_2 on"><a href="#type2">새로형</a></li>
+				<li class="sort_3"><a href="#type3">이미지형</a></li>
+			</ul>
+
+		</li>
+		<li class="right2">
+			<span class="searchform">
+				<input type="text" name="search_text" id="search_text" class="res_bbs_search_input" value="" title="제목, 내용, 작성자" />
+				<button type="submit" class="btn_resp size_b">검색</button>
+				<button type="button" class="btn_resp size_b hide" onclick="document.location.href='../board/?id=gallery_bbs'">초기화</button>
+			</span>
+		</li>
+	</ul>
+</form>
+<div class="article_info hide">
+총 0개(현재 0/총 0페이지)
+</div>
+
+
+<div class="no_data_area2 gallery">
+	등록된 게시글이 없습니다.
+</div>
+
+<div id="pagingDisplay" class="paging_navigation"><p><a class="on red">1</a></p></div>
+
+<ul class="bbs_bottom_wrap hide">
+	<li class="right">
+		<button type="button" name="boad_write_btn" id="boad_write_btn" board_id="" fileperm_read="" class="btn_resp size_b color2" />갤러리 쓰기</button>
+	</li>
+</ul>
+
+<div id="BoardPwCk" class="hide BoardPwCk">
+	<div class="msg">
+		<h3> 비밀번호 확인</h3>
+		<div>게시글 등록시에 입력했던 비밀번호를 입력해 주세요.</div>
+	</div>
+	<form name="BoardPwcheckForm" id="BoardPwcheckForm" method="post" action="../board_process" target="actionFrame " >
+	<input type="hidden" name="seq" id="pwck_seq" value="" />
+	<input type="hidden" name="returnurl" id="pwck_returnurl" value="" />
+	<div class="ibox">
+		<input type="password" name="pw" id="pwck_pw" style="width:140px;" />
+		<button type="submit" id="BoardPwcheckBtn" class="btn_resp size_b color2" />확인</button>
+		<button type="button" class="btn_resp size_b" onclick="$('#BoardPwCk').dialog('close');" />취소</button>
+	</div>
+	</form>
+</div>
+<!-- //비밀번호 확인 -->
+
+<script>
+$(function() {
+	// 갤러리 타입 선택
+	$('#customGallerySort a').click(function() {
+		$('#customGallerySort>li').removeClass('on');
+		$(this).parent('li').addClass('on');
+		switch ( this.hash ) {
+			case '#type1' : $('#customGalleryBoard').removeClass().addClass('custom_gallery_board1'); break
+			case '#type2' : $('#customGalleryBoard').removeClass().addClass('custom_gallery_board2'); break
+			case '#type3' : $('#customGalleryBoard').removeClass().addClass('custom_gallery_board3'); break
+			default :$('#customGalleryBoard').removeClass().addClass('custom_gallery_board1'); break
+	d
+		return false
+d);
+});
+</script>
+				<!-- ------- //각각의 게시판 index.html( 게시물 리스트 ) 로드 ------- -->
+			</div>
+
+		</div>
+		<!-- +++++ //cscenter contents ++++ -->
+	</div>
+	<script type="text/javascript" src="/data/skin/responsive_o2o_ver1_default_gl_1/common/cscenter_ui.js"></script><!-- 고객센터 ui 공통 -->
+
+</div>
+
+<div id="CmtBoardPwCkNew" class="hide BoardPwCk">
+	<div class="msg">
+		<!-- <h3> 비밀번호 확인</h3> -->
+		<div>댓글/답글 등록시에 입력했던 비밀번호를 입력해 주세요.</div>
+	</div>
+	<form name="BoardPwcheckFormNew" id="CmtBoardPwcheckFormNew" method="post" >
+	<input type="hidden" name="modetype" id="cmtmodetype_new" value="" />
+	<input type="hidden" name="seq" id="cmt_pwck_seq_new" value="" />
+	<input type="hidden" name="cmtseq" id="cmt_pwck_cmtseq_new" value="" />
+	<input type="hidden" name="cmtparentseq" id="cmt_pwck_cmtreplyseq_new" value="" />
+	<input type="hidden" name="cmtreplyidx" id="cmt_pwck_cmtreplyidx_new" value="" />
+	<div class="ibox">
+		<input type="password" name="pw" id="cmt_pwck_pw_new" class="input" />
+		<input type="button" id="CmtBoardPwcheckBtnNew" value=" 확인 " class="hand round_btn" />
+		<input type="button" value=" 취소 " class="hand round_btn" onclick="$('#CmtBoardPwCkNew').dialog('close');" />
+	</div>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+function getAuthLogin(){
+		var request_uri = "/board/?id=gallery_bbs"
+		if ( "" && "") request_uri = "/goods/view?no="
+		//이용하시려면 로그인이 필요합니다!<br/>로그인하시겠습니까?
+		openDialogConfirm(getAlert('et362'),'400','155',function(){top.location.href="/member/login?return_url="+encodeURIComponent(request_uri);},function(){});
+}
+
+function getLogin(){
+		var request_uri = "/board/?id=gallery_bbs"
+		if ( "" && "") request_uri = "/goods/view?no="
+		//이용하시려면 로그인이 필요합니다!<br/>로그인하시겠습니까?
+		openDialogConfirm(getAlert('et362'),'400','155',function(){top.location.href="/member/login?return_url="+encodeURIComponent(request_uri);},function(){});
+}
+
+function getMbLogin(){
+		var request_uri = "/board/?id=gallery_bbs"
+		if ( "" && "") request_uri = "/goods/view?no="
+		//이용하시려면 로그인이 필요합니다!<br/>로그인하시겠습니까?
+		openDialogConfirm(getAlert('et362'),'400','155',function(){top.location.href="/member/login?return_url="+encodeURIComponent(request_uri);},function(){});
+}
+</script>
